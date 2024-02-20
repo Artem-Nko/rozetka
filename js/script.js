@@ -31,114 +31,103 @@
 
 
 
-function checkAge() {
-//СОДАТЬ ТРИ ПЕРЕМЕННЫЕ КОТОРЫЕ БУДУТ ВЫЗЫВАТЬ МОДАЛЬНЫЕ ОКНА Promt
-const name = prompt("enter your name");
-const age = prompt("enter your age");
-const status = prompt("администратор, модератор, пользователь");
-//проверка на пустое поле
-    if (!name || !age || !status) {
-        throw new Error ('The field is empty!');
-    } 
-//проверка на возрас
-    const ageNum = parsInt(age);
-if (age < 18 || age > 70) {
-        throw new RangeError("не совершеннолетний");
-    } 
-//проверка на веедение только чисел
+// function checkAge() {
+// //СОДАТЬ ТРИ ПЕРЕМЕННЫЕ КОТОРЫЕ БУДУТ ВЫЗЫВАТЬ МОДАЛЬНЫЕ ОКНА Promt
+// const name = prompt("enter your name");
+// const age = prompt("enter your age");
+// const status = prompt("администратор, модератор, пользователь");
+// //проверка на пустое поле
+//     if (!name || !age || !status) {
+//         throw new Error ('The field is empty!');
+//     } 
+// //проверка на возрас
+//     const ageNum = parsInt(age);
+// if (age < 18 || age > 70) {
+//         throw new RangeError("не совершеннолетний");
+//     } 
+// //проверка на веедение только чисел
     
-    if(isNaN(age)) {
-        throw new TypeError();
-    }
-//проверка статуса на неверное слово
-if (status !== "admin" || status !== "moderator" || status !== "user") {
-    throw new EvalError();
-    }
-    alert("your can wach tv");
-}
+//     if(isNaN(age)) {
+//         throw new TypeError();
+//     }
+// //проверка статуса на неверное слово
+// if (status !== "admin" || status !== "moderator" || status !== "user") {
+//     throw new EvalError();
+//     }
+//     alert("your can wach tv");
+// }
 
 
 
-function checkAge() {
+// function checkAge() {
 
-    const name = prompt("Enter your name:");
-    const ageInput = prompt("Enter your age:");
-    const status = prompt("Enter your status (admin, moderator, user):");
+//     const name = prompt("Enter your name:");
+//     const ageInput = prompt("Enter your age:");
+//     const status = prompt("Enter your status (admin, moderator, user):");
     
-    if (!name || !ageInput || !status) {
-        throw new Error ('The field is empty!');
-        } 
+//     if (!name || !ageInput || !status) {
+//         throw new Error ('The field is empty!');
+//         } 
     
-    const age = parseInt(ageInput);  
+//     const age = parseInt(ageInput);  
     
-    if (isNaN(age)) {
-        throw new TypeError();
-    }
+//     if (isNaN(age)) {
+//         throw new TypeError();
+//     }
     
-    if (age < 18 || age > 70) {
-        throw new RangeError();
-    } 
+//     if (age < 18 || age > 70) {
+//         throw new RangeError();
+//     } 
     
-    if (status !== "admin" && status !== "moderator" && status !== "user") {
-        throw new EvalError();
-        }
-        alert("You can watch a movie!");
-    }
+//     if (status !== "admin" && status !== "moderator" && status !== "user") {
+//         throw new EvalError();
+//         }
+//         alert("You can watch a movie!");
+//     }
 
 
 
 
 
 
+// function sumSliceArray(arr, first, second) {
+// let sum = [];
+// sum = first + second;
+//   if (!Number(first) || !Number(second)) {
+//   throw new Error("Is not number type");  
+//   }  
+
+// if (first < 0 || second < 0 || first >= arr.length || second >= arr.length) {
+//   throw new RangeError("Index out of range");
+// }
+// return sum ;
+// }
 
 
 
 
+// function sumSliceArray(arr, first, second) {
+//     let sum = [];
+//     sum = first + second;
+//   if (!Number.isInteger(first) || !Number.isInteger(second)) {
+//     throw new TypeError('Both positions must be integers.');
+//   }
 
-
-
-
-
-
-
-function sumSliceArray(arr, first, second) {
-let sum = [];
-sum = first + second;
-  if (!Number(first) || !Number(second)) {
-  throw new Error("Is not number type");  
-  }  
-
-if (first < 0 || second < 0 || first >= arr.length || second >= arr.length) {
-  throw new RangeError("Index out of range");
-}
-return sum ;
-}
-
-
-
-
-function sumSliceArray(arr, first, second) {
-    let sum = [];
-    sum = first + second;
-  if (!Number.isInteger(first) || !Number.isInteger(second)) {
-    throw new TypeError('Both positions must be integers.');
-  }
-
-  if (first < 0 || second < 0 || first >= arr.length || second >= arr.length) {
-    throw new RangeError('Positions are out of range of the array.');
-  }
-    return sum;
-}
+//   if (first < 0 || second < 0 || first >= arr.length || second >= arr.length) {
+//     throw new RangeError('Positions are out of range of the array.');
+//   }
+//     return sum;
+// }
     
-//const arr = [1, 2, 3, 4, 5, 6, 7];
-//console.log(sumSliceArray(arr, 3, 5)); // Виведе 8
+// //const arr = [1, 2, 3, 4, 5, 6, 7];
+// //console.log(sumSliceArray(arr, 3, 5)); // Виведе 8
 
-try {
-  const arr = [1, 2, 3, 4, 5, 6, 7];
-  sumSliceArray(arr, 8, "five");
-} catch (e) {
-  console.log("Error"); // Виведе "Error"
-}
+// try {
+//   const arr = [1, 2, 3, 4, 5, 6, 7];
+//   sumSliceArray(arr, 8, "five");
+// } catch (e) {
+//   console.log("Error"); // Виведе "Error"
+// }
 
 
 
@@ -171,10 +160,34 @@ try {
 // }
 // Ошибка
 
+
+
 //проверка на число а не строка
-function calcRectangleArea(width, height) {
-   if(isNaN(width) || isNaN(height)) {
-    throw new Error();
-   }
-   return area = parseFloat(width) * parseFloat(height);
+// function calcRectangleArea(width, height) {
+//    if(isNaN(width) || isNaN(height)) {
+//     throw new Error();
+//    }
+//    return area = parseFloat(width) * parseFloat(height);
+// }
+
+
+
+
+
+const options = {
+  name: 'test',
+  width: 2468,
+  height: 1024,
+  colors: {
+    border: 'black',
+    bg: 'red'
+  } 
+};
+
+console.log(options.name);
+//delete options.name;
+console.log(options);
+
+for (let key in options) {
+  console.log(` свойство ${key} имеет значение +-${options[key]}`)
 }

@@ -8,59 +8,15 @@
     <title>Rozetka</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <div class="container">
-          <nav class="navbar">
-            <button class="sidebar">&#119064</button>
-            <a href="" class="main__logo">
-                <img class="logo" src="https://content2.rozetka.com.ua/widget_logotype/full/original/229862237.svg" alt="main-logo">
-            </a>
-
-            <button class="header__catalog">
-                <img class="catalog__svg" src="img/qrcode-solid.svg" alt="catalog">
-                Каталог
-            </button>
-
-            <div class="search__bar">
-              <input type="text" placeholder="Я шукаю..." class="search__input">
-              <button class="search__btn">Зайти</button>
-            </div>
-
-            <div class="header__actions">
-              <div class="language__bar">
-                <a href="#" class="language_ru">RU</a>
-                <div class="line"></div>
-                <a href="#" class="language_ua">UA</a>
-              </div>
-  
-              <a href="#" class="listing__option catalog">
-                <img src="./img/list.svg" alt="kalk">
-              </a>
-  
-              <a href="#" class="bell catalog">
-                <img src="./img/bell.svg" alt="bell">
-              </a>
-  
-              <a href="#" class="favorite catalog">
-                <img src="./img/heart.svg" alt="heart">
-                <span class="sub1">6</span>
-              </a>
-  
-              <a href="#" class="basket catalog">
-                <img src="./img/basket.png" alt="basket">
-              </a>
-            </div>
-
-            <button class="cart"></button>
-        </nav>
-        </div>
-      </header>
+    <div class="wrapper"> 
+      <div data-include="./pages-html/header.html"></div> 
+    </div>
       <main class="main">
         <section class="section"></section>
       </main>
       <footer class="footer"></footer>
     </div>
+    <script src="./js/data-include.js" async></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>
